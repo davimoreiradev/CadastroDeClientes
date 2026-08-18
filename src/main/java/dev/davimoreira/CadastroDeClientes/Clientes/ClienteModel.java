@@ -23,6 +23,7 @@ public class ClienteModel {
     private Long id;
     private String nomeCompleto;
     private String idade;
+    @Column(unique = true)
     private String email;
 
     @OneToMany(mappedBy = "endereco")//Um cliente pode ter varios endereços
